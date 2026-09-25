@@ -24,10 +24,14 @@ public class Driver : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        currentSpeed = normalSpeed;
-        boostText.gameObject.SetActive(false);
+        if(collision.collider.CompareTag("WorldCollision"))
+        {
+            currentSpeed = normalSpeed;
+            boostText.gameObject.SetActive(false);
+        }
+
     }
     
 

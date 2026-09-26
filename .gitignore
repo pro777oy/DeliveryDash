@@ -5,6 +5,8 @@
 [Bb]uild/
 [Bb]uilds/
 !docs/Build/
+# GitHub Pages cannot configure Unity's required Content-Encoding header.
+# Keep WebGL compression disabled instead of deploying .br artifacts.
 docs/Build/*.br
 [Ll]ogs/
 UserSettings/

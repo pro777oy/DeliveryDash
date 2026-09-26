@@ -12,6 +12,7 @@ public class Driver : MonoBehaviour
 
     void Start()
     {
+        MobileControlsUI.EnsureExists();
         boostText.gameObject.SetActive(false);
     }
     void OnTriggerEnter2D(Collider2D collision)
@@ -40,26 +41,31 @@ public class Driver : MonoBehaviour
     {
         float move = 0f;
         float steer = 0f;
+        Keyboard keyboard = Keyboard.current;
 
-     
-        if (Keyboard.current.wKey.isPressed)
+        if (keyboard != null && keyboard.wKey.isPressed)
         {
             move = 1f;
         }
-        if (Keyboard.current.sKey.isPressed)
+        if (keyboard != null && keyboard.sKey.isPressed)
         {
             move = -1f;
         }
 
 
-        if (Keyboard.current.aKey.isPressed)
+        if (keyboard != null && keyboard.aKey.isPressed)
         {
             steer = 1f;
         }
-        if (Keyboard.current.dKey.isPressed)
+        if (keyboard != null && keyboard.dKey.isPressed)
         {
             steer = -1f;
         }
+
+        // Touch and keyboard input share the existing movement code below.
+        move = Mathf.Clamp(move + MobileControlsUI.MoveInput, -1f, 1f);
+        steer = Mathf.Clamp(steer + MobileControlsUI.SteerInput, -1f, 1f);
+
         float moveAmount=  move*currentSpeed*Time.deltaTime; 
         float steerAmount=steer*steerSpeed*Time.deltaTime;
 

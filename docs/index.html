@@ -22,7 +22,6 @@
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">DeliveryDash</div>
       </div>
-      <div id="unity-instructions">Use <strong>W</strong> to drive forward, <strong>S</strong> to reverse, and <strong>A / D</strong> to steer. Pick up packages and deliver them to customers.</div>
     </div>
     <script>
       var canvas = document.querySelector("#unity-canvas");
@@ -53,12 +52,12 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/WebBuild.loader.js";
+      var loaderUrl = buildUrl + "/docs.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/WebBuild.data",
-        frameworkUrl: buildUrl + "/WebBuild.framework.js",
-        codeUrl: buildUrl + "/WebBuild.wasm",
+        dataUrl: buildUrl + "/docs.data.br",
+        frameworkUrl: buildUrl + "/docs.framework.js.br",
+        codeUrl: buildUrl + "/docs.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "DeliveryDash",

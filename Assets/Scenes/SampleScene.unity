@@ -36396,6 +36396,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collision
   destroyDelay: 0.5
+  deliveryCountText: {fileID: 0}
+  gameOverText: {fileID: 0}
 --- !u!199 &1814969234
 ParticleSystemRenderer:
   serializedVersion: 7
@@ -46618,11 +46620,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6275704123490236106, guid: a94f9b6524a7f43b2bbcc732bf3fe0e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.1
+      value: -7.07
       objectReference: {fileID: 0}
     - target: {fileID: 6275704123490236106, guid: a94f9b6524a7f43b2bbcc732bf3fe0e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.34
+      value: -11.44
       objectReference: {fileID: 0}
     - target: {fileID: 6275704123490236106, guid: a94f9b6524a7f43b2bbcc732bf3fe0e9, type: 3}
       propertyPath: m_LocalPosition.z
